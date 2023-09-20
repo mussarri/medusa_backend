@@ -82,7 +82,10 @@ const projectConfig = {
 
 /** @type {import('@medusajs/medusa').ConfigModule} */
 module.exports = {
-  projectConfig,
+  projectConfig: {
+    // ...
+    database_extra: { ssl: { rejectUnauthorized: false } },
+  },
   plugins,
   modules,
 };
